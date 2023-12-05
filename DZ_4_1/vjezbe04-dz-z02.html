@@ -1,0 +1,20 @@
+<!-- Zadatak: Napisati JS program koji u konzolu i u html dokument ispisuje parne brojeve od 1 do 100 i 
+njihove kvadrate; -->
+<!DOCTYPE html>
+<htmllang="hr">
+<head>
+<meta charset="UTF-8" />
+<title>Varijable</title>
+</head>
+<body>
+<script>
+    document.write('<h1>Parni brojevi od 1 do 100 i njihovi kvardati</h1>');
+    for(let i = 1; i <= 100; i++){
+        if(i % 2 === 0){
+            console.log(`Broj: ${i}, kvadrat: ${i*i}`);
+            document.write(`Broj: ${i}, kvadrat: ${i*i}`, '<br>');
+        }
+    }
+</script>
+</body>
+</html>
