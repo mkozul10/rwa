@@ -1,0 +1,35 @@
+<!--Zadatak: U Javascriptu imate polje koji je inicijalno zadano/deklarirano  kao:
+polje = newArray(1,2,3,4,7,8,5,6,9, 55, 12, 4,85);-->
+<!DOCTYPE html>
+<htmllang="hr">
+<head>
+<meta charset="UTF-8" />
+<title>Varijable</title>
+</head>
+<body>
+<script>
+    const polje = Array(1,2,3,4,7,8,5,6,9,55,12,4,85);
+    const skip = '<br>';
+    // a)
+    document.write(polje.length, skip);
+    // b)
+    let novi = polje.sort((a, b) => a - b);
+    document.write(novi, skip);
+    // c)
+    let novi2 = polje.sort((a, b) => b - a);
+    document.write(novi2, skip);
+    // d)
+    novi2.pop();
+    document.write(novi2, skip);
+    // e)
+    novi2.push(19,22);
+    document.write(novi2, skip);
+    // f)
+    const polje2 = ["Banana", "Orange", "Apple", "Mango"]
+    const polje_final = polje2.concat(polje);
+    document.write(polje_final);
+
+
+</script>
+</body>
+</html>
