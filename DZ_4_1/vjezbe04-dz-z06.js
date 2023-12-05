@@ -6,6 +6,6 @@ const pas = {
    name: 'Reks',
    age: 2,
 };
-pas.bark = () => 'AVAV';
+pas.zvuk = () => 'AVAV';
 
-console.log(pas.bark());
+console.log(pas.zvuk());
