@@ -1,0 +1,40 @@
+<!--U JS kreirajte novi objekt  s članovima
+firstName:"Marko", lastName:"Maric", age:40, eyeColor:"black"
+Definirajte još nekoliko objekata s sličnim indeksima i različitim vrijednostima. 
+Putem neke od petlji ispišite vrijednosti i indekse objekata u browser.-->
+<!DOCTYPE html>
+<htmllang="hr">
+<head>
+<meta charset="UTF-8" />
+<title>Varijable</title>
+</head>
+<body>
+<script>
+   const obj1 = {
+    firstName:"Marko", 
+    lastName:"Maric", age:40, 
+    eyeColor:"black"
+   };
+   const obj2 = {
+    firstName:"Mario", 
+    lastName:"Kozul", age:21, 
+    eyeColor:"brown",
+    height: 192
+   };
+   const obj3 = {
+    firstName:"Ivo", 
+    lastName:"Ivicc", age:22, 
+    eyeColor:"blue",
+    height: 180
+   };
+   const arr = [];
+   arr.push(obj1, obj2, obj3);
+   arr.map(obj => {
+    Object.keys(obj).forEach(key => {
+        document.write(`Key: ${key}, value: ${obj[key]}<br>`);
+    });
+    document.write('<br>');
+   });
+   </script>
+</body>
+</html>
