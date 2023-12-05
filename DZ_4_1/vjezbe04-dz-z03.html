@@ -1,0 +1,32 @@
+<!-- Zadatak: Napisati JS program koji u konzolu i html dokument ispisuje proste
+brojeve od 1 do 1000(u browseru svaki put u novom retku); -->
+<!DOCTYPE html>
+<htmllang="hr">
+<head>
+<meta charset="UTF-8" />
+<title>Varijable</title>
+</head>
+<body>
+<script>
+    const jeLiProst = (broj) => {
+        if (broj > 0 && broj <= 3) return true;
+        let condition = true;
+        for (let i = 2; i < broj; i++){
+            if (broj % i === 0){
+                condition = false;
+                break;
+            }
+        }
+        return condition;
+    }
+
+    document.write('<h1>Prosti brojevi od 1 do 100</h1>');
+    for(let i = 1; i <= 100; i++){
+        if(jeLiProst(i)){
+            document.write(i, '<br>');
+            console.log(i);
+        }
+    }
+</script>
+</body>
+</html>
