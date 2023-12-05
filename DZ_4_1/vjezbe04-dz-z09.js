@@ -11,8 +11,8 @@ const isPerfect = num => {
 const f = br => {
     const result = [];
     for(let i = 1; i < br; i++) if(isPerfect(i)) result.push(i);
-
-    return result ? result : `There are no perfect numbers below ${br}`;
+    if(result) result.forEach(item => console.log(item));
+    else console.log(`There are no perfect numbers below ${br}`);
 }
 
-console.log(f(129));
+f(128);
