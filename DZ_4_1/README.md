@@ -1,0 +1,1 @@
+.js files run with: node /nameOfFile.js/
