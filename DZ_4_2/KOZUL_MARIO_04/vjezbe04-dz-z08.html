@@ -1,0 +1,65 @@
+<!-- Napraviti HTML stranicu sljedeće funkcionalnosti:
+- Stranica treba korisniku pružati funkcionalnost on-line kalkulatora.
+- Funkcije kalkulatora trebaju biti zbrajanje, oduzimanje, množenje, dijeljene, sinus,
+kosinus, tanges, prirodni logaritam, logaritam po bazi 10, kvadriranje, kubiranje i 
+potenciranje (koristiti JS matematičke funkcije). -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #container{
+            display:flex;
+            flex-direction: column;
+            gap:5px;
+        }
+        .align{
+            display:flex; 
+            justify-content: center; 
+            align-items: center; 
+            gap:5px;
+        }
+    </style>
+    <script src="vjezbe04-dz-z08.js" defer></script>
+</head>
+<body>
+    <div id="container">
+        <div class="align">
+            <input type="number" id="op-1">
+            operand1
+        </div>
+        <div class="align">
+            <input type="number" id="op-2">
+            operand2
+        </div>
+        <div class="align">
+            <button data-value="+">+</button>
+            <button data-value="-">-</button>
+            <button data-value="*">*</button>
+            <button data-value="/">/</button>
+        </div>
+        <div class="align">
+            <button data-value="sin">sin</button>
+            <button data-value="cos">cos</button>
+            <button data-value="tan">tan</button>
+        </div>
+        <div class="align">
+            <button data-value="ln">ln</button>
+            <button data-value="log">log</button>
+        </div>
+        <div class="align">
+            <button data-value="⌃2">⌃2</button>
+            <button data-value="⌃3">⌃3</button>
+            <button data-value="⌃n">⌃n</button>
+        </div>
+    </div>
+</body>
+</html>
