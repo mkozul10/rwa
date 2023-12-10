@@ -1,0 +1,27 @@
+<!-- Napisati HTML formu s pripadajućim JS kodom koji radi funkciju zbrajanja 2 broja koja se unesu 
+u prva2 polja a rezultat se nakon klika na dugme Zbroji prikaže u trećem polju: -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="vjezbe04-dz-z06.js" defer></script>
+</head>
+<body style="display: flex; flex-direction: column; align-items: center; justify-content:center; height: 100vh;">
+    <form id="form-1" style="display: flex; flex-direction: column; gap:5px; width: 200px; align-items:center;">
+        <div>
+            X = <input type="text" id="input-x">
+        </div>
+        <div>
+            Y = <input type="text" id="input-y">
+        </div>
+        
+        <button type="submit" style="width: 50px;">Zbroji</button>
+    </form>
+    <hr style="width: 280px;">
+    <div>
+        REZULTAT = <input type="text" value="" readonly id="rezultat">
+    </div>    
+</body>
+</html>
