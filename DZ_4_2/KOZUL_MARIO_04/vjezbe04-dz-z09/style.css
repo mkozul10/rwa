@@ -1,0 +1,17 @@
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#prekidac{
+    display: flex;
+    align-items: center;
+}
+#zarulja{
+    display: flex;
+    align-items: center;
+}
+#container{
+    display: flex;
+}
