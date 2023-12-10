@@ -1,0 +1,29 @@
+<!-- Kreirajte novi HTML dokument sa pripadajućom formom sa sljedeće slike koju će korisnik unijeti 
+datum i godinu rođenja. U Javascriptu napraviti funkciju/program koji računa koliko godina ima 
+korisnik i to mu javlja ispisom u 'alert' prozoru. Program pozivati klikom na dugmesubmit 
+('Izračunaj'). -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="vjezbe04-dz-z07.js" defer></script>
+</head>
+<body style="display: flex; flex-direction: column; align-items: center; justify-content:center; height: 100vh;">
+    <form id="form-1" style="display: flex; flex-direction: column; gap:5px; width: 200px; align-items:center;">
+        <div>
+            Unesite dan (01-31) <input type="text" id="dan">
+        </div>
+        <div>
+            Unesite mjesec (01-12) <input type="text" id="mjesec">
+        </div>
+        <div>
+            Unesite godinu (npr. 1970) <input type="text" id="godina">
+        </div>
+        
+        <button type="submit">Izracunaj</button>
+    </form>   
+</body>
+</html>
