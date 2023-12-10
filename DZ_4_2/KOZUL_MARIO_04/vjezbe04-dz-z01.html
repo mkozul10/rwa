@@ -1,0 +1,40 @@
+<!-- Napravite HTML dokument s  potrebnim JS dijelom koji će izračunati aritmetičku i geometrijsku 
+sredinu prirodnih brojeva skupa brojeva. Skup brojeva se unese kroz prompt dijalog koji se korisniku 
+prikaže nakon prvog učitavanja stranice (brojevi odvojeni zarezom, npr1, 4, 16 ili 1, 3, 6, 7, 18 i sl), 
+a nakon toga izračunaju se aritmetička i geometrijska sredina i ispiše u html dokumentu. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const f = () => {
+            const brojevi = [...prompt('Unesite brojeve')];
+            let brojacBrojeva = 0;
+            const zbroj = brojevi.reduce((acc, br) => {
+                if (typeof +br === 'number' && +br > 0){
+                    brojacBrojeva++;
+                    return acc += +br;
+                }
+                else return acc;
+            }, 0);
+
+            if (!zbroj) return 'Nema prirodnih brojeva u unosu';
+
+            const aritmeticka = (zbroj / brojacBrojeva).toFixed(3);
+            const umnozak = brojevi.reduce((acc, br) => (typeof +br === 'number' && +br > 0) ? acc *= +br : acc, 1);
+            const geometrijska = Math.pow(umnozak, 1/brojacBrojeva).toFixed(3);
+            return `Geometrijska sredina je ${geometrijska}, a artimeticka je ${aritmeticka}`;
+        }
+
+        const str = f();
+        const body = document.querySelector('body');
+        const p = document.createElement('p');
+        p.innerText = str;
+        body.appendChild(p);
+    </script>
+</body>
+</html>
